@@ -1,0 +1,38 @@
+#loader分类
+1. 同步  就同步执行
+module.exports = function (content, map, meta) {
+  return content;
+};
+ 
+module.exports = function (content, map, meta) {
+  this.callback(null, content, map, meta);  // 也是同步
+  return; 
+};
+
+2. 异步  一定要调用async()方法，然后将callback()放在setTimeout里面执行， 想让他执行的更快写
+module.exports = function (content, map, meta) {
+  const callback = this.async();
+  // 进行异步操作
+  setTimeout(() => {
+    callback(null, result, map, meta);
+  }, 1000);
+};
+
+3. Raw  同步异步都可以，接收到的数据是buff数据流，经常用于处理图片等文件类资源
+module.exports = function (content) {
+  return content;
+};
+
+module.exports.raw = true;
+
+4. Pitching, 大概的意思是在执行当前loader之前去执行，如果use里有多个loader, 那从左到右的loader的pitch方法都执行完
+在从右到左执行所有的loader,要进行一个正确的数据传递
+在pitch方法中，如果存在return操作，那右边的和当前的loader都不执行了，只有之前执行过pitch的loader执行完正常的loader流程就结束了
+被称之为熔断机制，style-loader中存在
+
+module.exports = function (content) {
+  return content;
+};
+module.exports.pitch = function (remainingRequest, precedingRequest, data) {
+  console.log("do somethings");
+};

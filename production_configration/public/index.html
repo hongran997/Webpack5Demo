@@ -1,0 +1,52 @@
+<!--
+ * @Author: zhaohongran zhaohongran1997@163.com
+ * @Date: 2023-12-25 21:28:43
+ * @LastEditors: zhaohongran zhaohongran1997@163.com
+ * @LastEditTime: 2025-03-12 17:57:21
+ * @FilePath: \production_configration\public\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+  <style>
+    .flex {
+      display: flex;
+    }
+  </style>
+  <!-- 使用了html-webpack-plugin之后，就不用手动引入script了 -->
+  <!-- <script src="../dist/static/js/index.js"></script> -->
+</head>
+<body>
+  Hello Webpack5~~
+  <div class="flex">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+  </div>
+  <br>
+  <div class="flex">
+    <div class="box6"></div>
+    <div class="box7"></div>
+    <div class="box8"></div>
+  </div>
+  <br>
+  <div>
+    <span class="iconfont icon-fenlei"></span>
+    <span class="iconfont icon-dianzan"></span>
+    <span class="iconfont icon-money"></span>
+    <span class="iconfont icon-danhuatang"></span>
+  </div>
+  <div>
+    <button id="btn">按需加载</button>
+  </div>
+</body>
+</html>

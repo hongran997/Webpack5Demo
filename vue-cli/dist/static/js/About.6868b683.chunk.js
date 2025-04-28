@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkvue_cli=self.webpackChunkvue_cli||[]).push([[74],{6705:(e,u,n)=>{n.r(u),n.d(u,{default:()=>r});var c=n(6252);const l={},r=(0,n(3744).Z)(l,[["render",function(e,u){return(0,c.wg)(),(0,c.iD)("div",null,"ABOUT !!!")}]])}}]);
+//# sourceMappingURL=About.6868b683.chunk.js.map

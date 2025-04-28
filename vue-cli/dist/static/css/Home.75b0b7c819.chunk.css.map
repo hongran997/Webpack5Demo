@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/Home.75b0b7c819.chunk.css","mappings":"AASA,6BACE,UACF","sources":["webpack://vue-cli/./src/views/Home.vue"],"sourcesContent":["<template>\r\n  <div class=\"home-title\">HOME !!!</div>\r\n</template>\r\n\r\n<script setup>\r\n\r\n</script>\r\n\r\n<style scoped>\r\n.home-title{\r\n  color: pink;\r\n}\r\n</style>"],"names":[],"sourceRoot":""}

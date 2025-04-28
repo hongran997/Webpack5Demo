@@ -1,0 +1,10 @@
+webpack基础
+两种模式、五个核心概念
+打包指令：webpack   webpack serve
+
+webpack高级优化
+主要从四个方面着手
+第一个提升开发体验，devtool: "source-map"
+第二个优化打包速度，oneof, include/exclude, cache, thread, hmr
+第三个减小包的体积, tree-shaking[单入口，import], babel[注释]，image-minimizer
+第四个提升运行性能, code split, runtime cache, core-js, preload/prefetch, pwa 

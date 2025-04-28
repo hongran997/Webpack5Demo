@@ -1,0 +1,34 @@
+# 编译vue文件所需要的包
+npm install -D vue-loader vue-template-compiler
+
+#基础包
+npm install eslint-webpack-plugin html-webpack-plugin vue-style-loader css-loader postcss-loader postcss-preset-env -D
+
+npm install less-loader sass-loader sass stylus-loader babel-loader stylus-loader webpack webpack-cli webpack-dev-server -D
+
+#eslintrc.js 配置文件所需包
+npm install @babel/eslint-parser  eslint-plugin-vue -D
+#babelrc.js 配置文件所需包
+npm install @vue/cli-plugin-babel -D
+
+npm install vue
+
+npm install cross-env -D
+
+npm i vue-router
+
+pnpm i mini-css-extract-plugin css-minimizer-webpack-plugin -D
+npm install copy-webpack-plugin -D
+
+#关于图片压缩相关的依赖
+npm i image-minimizer-webpack-plugin imagemin -D
+npm install imagemin-gifsicle -D
+npm install imagemin-jpegtran -D
+npm install imagemin-optipng -D
+npm install imagemin-svgo -D
+
+
+npm install element-plus --save
+
+npm install -D unplugin-vue-components unplugin-auto-import
+npm install unplugin-auto-import/webpack -D
