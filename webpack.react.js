@@ -114,6 +114,7 @@ module.exports = {
     !isProduction && new ReactRefreshWebpackPlugin() // 开发环境下开启react的HMR功能
   ].filter(Boolean),
   optimization: {
+    usedExports: true, // 只打包用到的代码, 移除项目和第三方依赖中未使用的代码，主要影响代码级别的优化
     minimize: isProduction,
     minimizer: [
       new CssMinimizerWebapckPlugin(),

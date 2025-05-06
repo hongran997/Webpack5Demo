@@ -1,0 +1,21 @@
+{
+  "name": "webpack5-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "demo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "A webpack 5 demo project",
+  "sideEffects": [
+    "*.css",
+    "*.scss",
+    "*.less",
+    "./src/polyfills.js"
+  ]
+}
