@@ -115,6 +115,7 @@ module.exports = {
   ].filter(Boolean),
   optimization: {
     usedExports: true, // 只打包用到的代码, 移除项目和第三方依赖中未使用的代码，主要影响代码级别的优化
+    sideEffects: true, // 启用文件级别优化，默认值是 true，表示开启对 package.json 中 sideEffects 的读取
     minimize: isProduction,
     minimizer: [
       new CssMinimizerWebapckPlugin(),

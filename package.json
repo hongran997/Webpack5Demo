@@ -18,4 +18,7 @@
     "*.less",
     "./src/polyfills.js"
   ]
+  // sideEffects: true：所有文件都有副作用，不会被删除（默认值）
+  // sideEffects: false：所有文件都没有副作用，未使用的会被删除
+  // sideEffects: ['*.css']：指定文件有副作用，其他文件未使用会被删除
 }
