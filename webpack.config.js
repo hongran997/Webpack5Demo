@@ -120,7 +120,8 @@ module.exports = {
       threads
     }),
     new PreloadWebpackPlugin({
-      rel: 'prefetch' // 预加载，所有资源都会在浏览器空闲时加载
+      rel: 'preload', // 预加载
+      include: ['app', 'vendors'], // 预加载主页文件
     }),
     new WorkboxPlugin.GenerateSW({
       // 这些选项帮助快速启用 ServiceWorkers
@@ -132,7 +133,8 @@ module.exports = {
       shared: {
         // singleton: true, 表示只共享一个版本，不共享多个版本，优先级高
         // eager: true, 表示立即加载，不延迟加载，优先级高于lazy
-        'lodash': {singleton: true, requiredVersion: false}
+        // 不会导致主包变大
+        'lodash': {singleton: true, requiredVersion: false, eager: false},
       }
     })
   ],
@@ -148,6 +150,9 @@ module.exports = {
           compress: {
             drop_console: true,
             drop_debugger: true,
+          },
+          format: {
+            comments: true, // 移除所有注释的代码
           },
           mangle: true,
         }
@@ -182,7 +187,9 @@ module.exports = {
     }),
     ],
     splitChunks: {
-      chunks: "all", // 对所有模块都进行分割
+      chunks: "async", // 只对异步模块进行分割
+      minSize: 20000, // 只要大于20kb就进行分割
+      maxSize: 100000, // chunk 的最大体积
       cacheGroups: { // 组，哪些模块要打包到一个组
         defaultVendors: { // 组名
           test: /[\\/]node_modules[\\/]/, // 需要打包到一起的模块
