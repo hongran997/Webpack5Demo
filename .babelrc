@@ -1,0 +1,14 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage", // 按需引入polyfill
+        "corejs": 3, // 指定core-js 版本
+        "targets": {
+          "browsers": [">0.25%", "not dead"] // 可指定更老的浏览器
+        }
+      }
+    ]
+  ]
+}
